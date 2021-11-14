@@ -1,0 +1,28 @@
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-decoration: none;
+}
+.footer-container a{
+    text-decoration: none;
+}
+.bg-footer{
+    background-color: rgb(10, 39, 48);
+}
+.footer-text{
+    color: whitesmoke;
+    margin-top: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media only screen and (max-width:688px) {
+    .footer-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .footer-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

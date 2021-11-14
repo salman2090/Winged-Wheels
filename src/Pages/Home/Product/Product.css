@@ -1,0 +1,16 @@
+.product-container{
+    border-radius: 20px;
+}
+
+.product-container img{
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+    margin: auto;
+
+}
+
+.card-body{
+    margin: auto;
+    display: block;
+}

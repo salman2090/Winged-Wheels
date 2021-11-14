@@ -1,0 +1,22 @@
+.dashboard-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    
+
+}
+.listing-decoration{
+    text-align: left;
+}
+/* Make it Responsive*/
+
+@media only screen and (max-width:688px) {
+    .dashboard-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width:689px) and (max-width:991px) {
+    .dashboard-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
