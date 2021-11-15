@@ -13,7 +13,7 @@ const Extra = () => {
 
     return (
         <div >
-            <h2 className="my-5 fw-bold ">Why Choose Us</h2>
+            <h2 className="mt-5 mb-3 fw-bold ">Why Choose Us</h2>
             <div className="extras-container ">
             <div>
                 <img className=" h-75 img-fluid mt-2" src={extra} alt="" />

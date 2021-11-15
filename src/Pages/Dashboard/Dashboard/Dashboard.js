@@ -59,7 +59,10 @@ const Dashboard = () => {
       </div>
 
       <Switch>
-        <Route exact path={`${path}/myPurchases`}>
+        <Route exact path={path}>
+            <MyPurchases></MyPurchases>
+        </Route>
+        <Route path={`${path}/myPurchases`}>
             <MyPurchases></MyPurchases>
         </Route>
         <Route path={`${path}/pay`}>

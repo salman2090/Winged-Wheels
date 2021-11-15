@@ -16,15 +16,19 @@ const MyPurchases = () => {
     },[control])
 
     const handleDelete = (id) => {
-        fetch(`https://guarded-chamber-73024.herokuapp.com/delete/${id}`,{
-            method:"DELETE",
-        })
-            .then(res => res.json())
-            .then(data => {
-                if(data.deletedCount) {
-                    setControl(!control);
-                }
-            });
+        const proceed=window.confirm('Are you sure, you want to delete?');
+        if(proceed) {
+            fetch(`https://guarded-chamber-73024.herokuapp.com/delete/${id}`,{
+                method:"DELETE",
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if(data.deletedCount) {
+                        setControl(!control);
+                    }
+                });
+        }
+       
     }
 
     useEffect(() => {
@@ -47,7 +51,7 @@ const MyPurchases = () => {
                             <Card.Body>
                                 <h3>{purchase?.name}</h3>
                                 <p>{purchase?.description}</p>
-                                <p>Cost: {purchase?.price}</p>
+                                <h4>Cost: {purchase?.price}</h4>
                             <Button onClick={() => handleDelete(purchase._id)} className=" mt-3" variant="outline-danger">Cancel</Button>
                             </Card.Body>
                         </Card> 

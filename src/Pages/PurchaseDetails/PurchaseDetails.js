@@ -16,7 +16,7 @@ const PurchaseDetails = () => {
         fetch(`https://guarded-chamber-73024.herokuapp.com/singleProduct/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
-    }, []);
+    }, [productId]);
     console.log(product);
 
     const { register, handleSubmit, formState: { errors } } = useForm();

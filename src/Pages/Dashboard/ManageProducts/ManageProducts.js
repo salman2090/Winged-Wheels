@@ -12,7 +12,9 @@ const ManageProducts = () => {
     }, [control]);
 
     const handleDelete = (id) => {
-        fetch(`https://guarded-chamber-73024.herokuapp.com/delete/${id}`,{
+        const proceed=window.confirm('Are you sure, you want to delete?');
+        if (proceed) {
+            fetch(`https://guarded-chamber-73024.herokuapp.com/delete/${id}`,{
             method:"DELETE",
         })
             .then(res => res.json())
@@ -21,7 +23,7 @@ const ManageProducts = () => {
                     setControl(!control);
                 }
             });
-        console.log(id);
+        }
     }
 
     console.log(products)
