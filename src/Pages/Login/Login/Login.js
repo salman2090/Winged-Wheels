@@ -11,7 +11,7 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
 
-    const handleOnChange = e => {
+    const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
         const newLoginData = {...loginData};
@@ -29,12 +29,12 @@ const Login = () => {
             { !isLoading && <Form className="form-bg mb-5" onSubmit={handleLoginSubmit}>
                 <Form.Group className="mb-3 w-50 m-auto" controlId="formBasicEmail">
                     <h6 className="text-start">Enter Your Email</h6>
-                    <Form.Control type="email" name="email" onChange = {handleOnChange} placeholder="Email" />
+                    <Form.Control type="email" name="email" onBlur = {handleOnBlur} placeholder="Email" />
                 </Form.Group>
 
                 <Form.Group className="mb-5 w-50 m-auto" controlId="formBasicPassword">
                     <h6 className="text-start">Enter Your Password</h6>
-                    <Form.Control type="password" name="password" onChange = {handleOnChange} placeholder="Password" />
+                    <Form.Control type="password" name="password" onBlur = {handleOnBlur} placeholder="Password" />
                 </Form.Group>
                 <Button  variant="primary" type="submit">
                     Submit
