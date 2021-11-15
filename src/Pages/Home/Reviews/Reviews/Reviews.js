@@ -9,13 +9,13 @@ const Reviews = () => {
 
     //load data
     useEffect(() => {
-        fetch("http://localhost:5000/reviews")
+        fetch("https://guarded-chamber-73024.herokuapp.com/reviews")
             .then(res => res.json())
             .then(data => setReviews(data.slice(0,6)))
     })    
     return (
         <div>
-            <h2 className="fw-bold">Valuable Reviews of Our Customer</h2>
+            <h2 className="fw-bold mt-5 mb-3">Valuable Reviews of Our Customers</h2>
             <div className="reviews-container">
                 {
                     reviews.map(review => <Review

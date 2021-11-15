@@ -13,7 +13,7 @@ const PurchaseDetails = () => {
     const email = sessionStorage.getItem("email");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleProduct/${productId}`)
+        fetch(`https://guarded-chamber-73024.herokuapp.com/singleProduct/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, []);
@@ -25,7 +25,7 @@ const PurchaseDetails = () => {
         data.email = email;
         data.status = "pending";
 
-        fetch("http://localhost:5000/addPurchase", {
+        fetch("https://guarded-chamber-73024.herokuapp.com/addPurchase", {
             method: "POST",
             headers: {"content-type": "application/json"},
             body: JSON.stringify(data)
@@ -63,7 +63,7 @@ const PurchaseDetails = () => {
 
                     <h3>Client Details</h3>
 
-                    <input {...register("clientName", { required: true})} defaultValue={user.name}  className="p-2 m-2 w-50"/>
+                    <input {...register("clientName", { required: true})} defaultValue={user.displayName}  className="p-2 m-2 w-50"/>
                     <br />
                     <input {...register("email", { required: true})} defaultValue={user.email}  className="p-2 m-2 w-50"/>
                     <br />

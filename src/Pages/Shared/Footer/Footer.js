@@ -15,25 +15,25 @@ const Footer = () => {
         <div className="bg-footer p-3">
             <div className="p-5 footer-container ">
                 <div >
-                    <h5 className="text-light">Contact</h5>
-                    <p className="text-light fs-5"><span>{phoneIcon}</span> {' '}&emsp;(+880) 1213243145</p>
-                    <p className="text-light fs-6"><span>{locationIcon}</span> {' '}&emsp; 60, College Street, Dhaka-1215.</p>
+                    <h5 className="text-light mb-5">Contact Us</h5>
+                    <p className="text-light fs-5"><span>{phoneIcon}</span> {' '}&emsp;(+880) 123456789</p>
+                    <p className="text-light fs-6"><span>{locationIcon}</span> {' '}&emsp; 202/1, Ranking Street, Dhaka-1215.</p>
                     <p className="text-light fs-6"><span>{emailIcon}</span> {' '}&emsp; w.wheels@gmail.com</p>
                 </div>
                 <div >
-                    <h5 className="text-light">Policy</h5>
+                    <h5 className="text-light mb-3">Policy</h5>
                     <p><Link className="fw-bold" to="/">Terms</Link></p>
                     <p><Link className="fw-bold" to="/">License</Link></p>
-                    <p><Link className="fw-bold" to="/">Market API</Link></p>
+                    <p><Link className="fw-bold" to="/">Disclaimer</Link></p>
+  
                 </div>
                 <div>
-                <h5 className="text-light">Our Community</h5>               
+                <h5 className="text-light mb-3">Our Community</h5>               
                     <p><Link className="fw-bold" to="/">Blog</Link></p>
                     <p><Link className="fw-bold" to="/">Forums</Link></p>
-                    <p><Link className="fw-bold" to="/">Meetups</Link></p>
                 </div>
                 <div>
-                <h5 className="text-light">Help</h5>               
+                <h5 className="text-light mb-3">Help</h5>               
                     <p><Link className="fw-bold" to="/">Help Center</Link></p>
                     <p><Link className="fw-bold" to="/">Authors</Link></p>
                 </div>

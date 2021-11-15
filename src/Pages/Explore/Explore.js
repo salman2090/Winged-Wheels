@@ -9,12 +9,12 @@ const Explore = () => {
 
     //load data
     useEffect(() => {
-        fetch("http://localhost:5000/products")
+        fetch("https://guarded-chamber-73024.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setProducts(data))
     })    
     return (
-        <div className="products-container">
+        <div className="explore-container">
             {
                 products.map((pd) => (
                 <div className="product">

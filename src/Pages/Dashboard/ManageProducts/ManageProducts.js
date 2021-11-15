@@ -6,13 +6,13 @@ const ManageProducts = () => {
     const [control, setControl] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:5000/products")
+        fetch("https://guarded-chamber-73024.herokuapp.com/products")
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [control]);
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://guarded-chamber-73024.herokuapp.com/delete/${id}`,{
             method:"DELETE",
         })
             .then(res => res.json())

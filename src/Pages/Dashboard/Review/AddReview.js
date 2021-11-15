@@ -5,7 +5,7 @@ const AddReview = () => {
     const { register, handleSubmit} = useForm();
 
     const onSubmit = data => {
-        fetch("http://localhost:5000/addReviews", {
+        fetch("https://guarded-chamber-73024.herokuapp.com/addReviews", {
             method: "POST",
             headers: {"content-type" : "application/json"},
             body: JSON.stringify(data),
@@ -16,13 +16,13 @@ const AddReview = () => {
     };
     return (
         <div>
-            <h2>Review</h2>
+            <h2 className="fw-bold my-5">Share Your Experience With Us</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 
                 <input {...register("name")} placeholder="Name" className="p-2 m-2 w-25"/>
                 <br />
 
-                <input {...register("description")} placeholder="Share Your Experience" className="p-2 m-2 w-25"/>
+                <input {...register("description")} placeholder="Review" className="p-2 m-2 w-25"/>
                 <br />
 
                 <input type="number" {...register("rating")} placeholder="Input Your Rating"  className="p-2 m-2 w-25"/>

@@ -1,7 +1,6 @@
 import React from "react";
 import './Dashboard.css';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Link,

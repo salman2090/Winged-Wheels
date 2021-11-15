@@ -10,13 +10,13 @@ const MyPurchases = () => {
     const {user} = useAuth();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myPurchase/${email}`)
+        fetch(`https://guarded-chamber-73024.herokuapp.com/myPurchase/${email}`)
             .then(res => res.json())
             .then(data => setPurchases(data))
     },[control])
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://guarded-chamber-73024.herokuapp.com/delete/${id}`,{
             method:"DELETE",
         })
             .then(res => res.json())
@@ -28,7 +28,7 @@ const MyPurchases = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchases?email=${user.email}`,{
+        fetch(`https://guarded-chamber-73024.herokuapp.com/purchases?email=${user.email}`,{
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('idToken')}`
             }

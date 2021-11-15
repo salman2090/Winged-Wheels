@@ -11,7 +11,7 @@ const ManagePurchases = () => {
     console.log(status);
 
     const handleUpdate = (id) => {
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://guarded-chamber-73024.herokuapp.com/updateStatus/${id}`, {
             method: "PUT",
             headers: {"content-type": "application/json"},
             body: JSON.stringify({status})
@@ -19,7 +19,7 @@ const ManagePurchases = () => {
         console.log(id)
     }
     useEffect(() => {
-        fetch("http://localhost:5000/managePurchase")
+        fetch("https://guarded-chamber-73024.herokuapp.com/managePurchase")
             .then(res => res.json())
             .then(data => setPurchases(data))
     } ,[]);

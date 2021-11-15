@@ -32,13 +32,6 @@ const Header = () => {
                             :
                             <Nav.Link as={Link} to="/login" className="text-dark fs-5">Login</Nav.Link>
                         }
-                    
-                        {/* {user?.email && isLogin ?
-                            <Button onClick={logOut} variant="light">Logout</Button>:
-                            <Nav.Link as={Link} to="/login" className="text-white">Login</Nav.Link>}
-                    <Navbar.Text>
-                         <a href="#login">{user?.displayName}</a>
-                    </Navbar.Text> */}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
